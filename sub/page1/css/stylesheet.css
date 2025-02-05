@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/*리셋 코드*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Head */
+header {
+  z-index: 500;
+  box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  padding: 1vw 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  transition: all 0.4s;
+}
+header .inner {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .inner h1 {
+  white-space: nowrap;
+  font-size: 0;
+}
+header .inner h1 img {
+  width: 8vw;
+}
+header .inner h1 #blacklogo {
+  display: none;
+}
+header.scrolled {
+  background: #fff;
+  color: #333;
+}
+header.scrolled h1 #whitelogo {
+  display: none;
+}
+header.scrolled h1 #blacklogo {
+  display: block;
+}
+header.scrolled #rightmenu ul li a {
+  color: #000;
+}
+header.scrolled #rightmenu ul li:first-child::after {
+  content: "|";
+  color: #000;
+  font-size: clamp(15px, 0.9vw, 20px);
+}
+header.scrolled nav ul li a {
+  color: #000;
+}
+header.scrolled nav ul li a:hover {
+  color: #808080;
+}
+
+nav {
+  display: flex;
+}
+
+#rightmenu {
+  vertical-align: middle;
+}
+#rightmenu ul {
+  display: flex;
+}
+#rightmenu ul li {
+  margin: 0 10px;
+  white-space: nowrap;
+}
+#rightmenu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 47px;
+  font-size: clamp(16px, 1.05vw, 20px);
+}
+#rightmenu ul li:first-child::after {
+  content: "|";
+  color: #fff;
+  padding-left: 16px;
+  font-weight: bold;
+  font-size: clamp(10px, 0.9vw, 20px);
+}
+
+#mobilemenu {
+  display: none;
+}
+#mobilemenu .xi-bars {
+  color: #000;
+}
+
+nav ul {
+  white-space: nowrap;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  white-space: nowrap;
+  display: inline;
+  margin: 0 3.5vw;
+}
+
+nav ul li a {
+  line-height: 47px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: clamp(16px, 1.35vw, 22px);
+}
+
+nav ul li a:hover {
+  color: #808080;
+}
+
+/* Main */
+/*메인 스타일*/
+main #booking {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+main #booking .inner {
+  padding: 0 220px;
+}
+main #booking * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+main #booking .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  padding: 20px 0;
+  justify-content: center;
+}
+main #booking .search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  white-space: nowrap;
+}
+main #booking .label {
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: bold;
+  color: #8B4513;
+  /* 브라운 계열 */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+main #booking select,
+main #booking input {
+  width: 180px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+main #booking .guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main #booking .guest-counter button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+main #booking .guest-counter span {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+main #booking .search-btn {
+  padding: 10px 92px;
+  border: 2px solid #8B4513;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #8B4513;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+main #booking .search-btn:hover {
+  background: #8B4513;
+  color: white;
+}
+main .inner {
+  max-width: 1299px;
+  margin: 0 auto;
+}
+main #RoomInformation .RoomInformation_txt1 {
+  margin-top: 145px;
+  font-size: 20px;
+  font-family: "Abel";
+  color: #8B4513;
+  letter-spacing: 5px;
+}
+main #RoomInformation p {
+  margin: 16px 0;
+  font-family: "Pretendard";
+  color: #8B4513;
+  font-size: 40px;
+}
+main #RoomInformation .RoomInformation_hyphen {
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  color: #8B4513;
+  display: block;
+}
+main #RoomInformation .RoomInformation_bar {
+  display: none;
+}
+main #ground_plan .RoomInformation_txt2 {
+  font-size: 16px;
+  margin-top: 28px;
+  font-family: "Trebuchet MS";
+  color: #2B2921;
+  line-height: 1.8;
+  width: 50%;
+}
+main #ground_plan {
+  display: flex;
+  gap: 125px;
+  margin-bottom: 90px;
+}
+main #ground_plan .RoomInformation_txt2 p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+main #ground_plan > p {
+  width: 50%;
+}
+main #ground_plan > p img {
+  width: 100%;
+  height: 100%;
+}
+main #RoomGuide {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #E6E6E6;
+  max-width: 1299px;
+  max-height: 141px;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 0;
+}
+main #RoomGuide p {
+  font-size: 20px;
+  font-family: "Abel";
+  color: #8B4513;
+  letter-spacing: 5px;
+  width: 31%;
+}
+main #RoomGuide li {
+  font-family: "Trebuchet MS";
+  color: #2B2921;
+  font-size: 16px;
+  line-height: 30px;
+}
+main #RoomGuide li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #999999;
+  vertical-align: 5px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+main #RoomGuide ul {
+  width: 46%;
+  color: #999999;
+}
+main #RoomGuide ul:last-child {
+  width: 23%;
+}
+main #RoomGuide li span {
+  color: #999999;
+}
+main #RoomGuide li.last::before {
+  display: none;
+}
+main #Features {
+  border-top: 1px solid #E6E6E6;
+  max-width: 1299px;
+  max-height: 141px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+main #Features p {
+  font-size: 20px;
+  font-family: "Abel";
+  color: #8B4513;
+  letter-spacing: 5px;
+  width: 31%;
+}
+main #Features ul {
+  display: flex;
+  text-align: center;
+  gap: 80px;
+  margin: 5px 0;
+}
+main #Features ul span {
+  display: block;
+  font-family: "Trebuchet MS";
+  color: #999999;
+  font-size: 16px;
+  margin-top: 10px;
+}
+main #SERVICES_FACILTIES {
+  border-top: 1px solid #E6E6E6;
+  max-width: 1299px;
+  max-height: 141px;
+  border-bottom: 1px solid #E6E6E6;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+main #SERVICES_FACILTIES p {
+  font-size: 20px;
+  font-family: "Abel";
+  color: #8B4513;
+  letter-spacing: 5px;
+  width: 31%;
+}
+main #SERVICES_FACILTIES li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #999999;
+  vertical-align: 5px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+main #SERVICES_FACILTIES ul {
+  width: 23%;
+}
+main #SERVICES_FACILTIES li {
+  font-family: "Trebuchet MS";
+  color: #999999;
+  font-size: 16px;
+  line-height: 30px;
+}
+main #RoomInfoContainer {
+  max-width: 1299px;
+  margin: 96px auto;
+}
+main #RoomInfoContainer .swiper-button-prev {
+  left: 17px;
+  color: #fff;
+  text-shadow: 2px 5px 5px black;
+}
+main #RoomInfoContainer .swiper-button-next {
+  right: 17px;
+  color: #fff;
+  text-shadow: 2px 5px 5px black;
+}
+main #RoomCaution {
+  padding: 112px 0;
+  background: #FAF8F3;
+}
+main #RoomCaution .RoomCaution_txt1 {
+  font-size: 20px;
+  font-family: "Abel";
+  color: #8B4513;
+  letter-spacing: 5px;
+}
+main #RoomCaution .RoomCaution_txt2 {
+  padding: 17px 0;
+  font-family: "Pretendard";
+  color: #8B4513;
+  font-size: 30px;
+  border-bottom: 1px solid #8B4513;
+  margin-bottom: 30px;
+}
+main #RoomCaution .RoomCaution_txt3 li {
+  font-family: "Trebuchet MS";
+  color: #2B2921;
+  font-size: 16px;
+  line-height: 30px;
+}
+main #RoomCaution .RoomCaution_txt3 li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #2B2921;
+  vertical-align: 5px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+main #RoomCaution .RoomCaution_txt3 > p {
+  margin-left: 14px;
+  color: #656565;
+}
+
+footer .inner {
+  padding: 0 220px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1vw 0;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.8vw;
+  white-space: nowrap;
+}
+footer hr {
+  margin: 25px 0;
+}
+footer .foottitle {
+  font-weight: bold;
+}
+footer .phone {
+  font-size: clamp(24px, 1.6vw, 30px);
+  font-weight: bold;
+  margin: -6px 0 6px;
+}
+footer #footerlogo {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+footer #footerlogo p {
+  width: 100%;
+  height: 100%;
+}
+footer #footerlogo p img {
+  width: 8vw;
+}
+footer #footercontent {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(12px, 0.8vw, 20px);
+}
+footer #footercontent #firstfoot {
+  display: flex;
+}
+footer #footercontent #firstfoot #qus {
+  width: 30%;
+  line-height: 1.5;
+}
+footer #footercontent #firstfoot #ans {
+  width: 70%;
+  line-height: 1.5;
+}
+footer #footercontent #secondfoot ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer #footercontent #secondfoot li {
+  line-height: 1.5;
+}
+footer #footercontent #thirdfoot ul li {
+  line-height: 1.5;
+}
+footer #footercontent #forthfoot ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer #footercontent #forthfoot ul li a {
+  color: #555;
+}
+footer #copyright {
+  color: rgba(255, 255, 255, 0.4666666667);
+}
+
+@media all and (max-width: 1024px) {
+  .inner {
+    padding: 0 4%;
+  }
+  main #booking {
+    height: 175px;
+  }
+  main #booking .check-out {
+    order: 5;
+  }
+  main #booking #reservation.inner .search-container {
+    flex-wrap: wrap;
+  }
+  main #reservation.inner {
+    padding: 0 60px;
+  }
+  main #reservation.inner .search-container {
+    display: flex;
+    align-items: center;
+    gap: 20px 48px;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  main #reservation.inner .search-btn {
+    padding: 10px 50px;
+  }
+  main #sub_view img {
+    width: 100%;
+  }
+  main .RoomInformation_txt2 p {
+    display: inline;
+  }
+  main #ground_plan {
+    flex-direction: column;
+  }
+  main #ground_plan .RoomInformation_txt2 {
+    width: 100%;
+    text-align: left;
+  }
+  main .inner {
+    text-align: center;
+  }
+  main #ground_plan > p {
+    width: auto;
+  }
+  main .RoomCaution_txt3 {
+    text-align: left;
+  }
+  main #RoomGuide p {
+    margin-left: 4%;
+  }
+  main #Features p {
+    margin-left: 4%;
+  }
+  main #SERVICES_FACILTIES p {
+    margin-left: 4%;
+  }
+  main #RoomCaution .RoomCaution_txt2 {
+    padding-bottom: 4%;
+    text-align: left;
+  }
+  main #RoomCaution .RoomCaution_txt1 {
+    text-align: left;
+  }
+  #RoomInfoContainer img {
+    width: 100%;
+  }
+  main #RoomInformation .RoomInformation_hyphen {
+    display: none;
+  }
+  main #RoomInformation .RoomInformation_bar {
+    display: block;
+    color: #8B4513;
+  }
+  footer .inner {
+    padding: 4%;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */

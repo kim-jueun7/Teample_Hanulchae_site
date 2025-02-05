@@ -1,0 +1,657 @@
+    /*리셋 코드*/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        vertical-align: top;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* Head */
+    header {
+        z-index: 500;
+        box-sizing: border-box;
+        background: transparent;
+        color: #fff;
+        padding: 1vw 0;
+        text-align: center;
+        position:fixed;
+        width: 100%;
+        transition: all .4s;
+        .inner{padding: 0 50px; display: flex; justify-content: space-between; align-items: center;
+            h1{white-space: nowrap; font-size:0;
+                img{width: 8vw; }
+                #blacklogo{display: none;}
+            }    
+        }
+        &.scrolled{background: #fff; color: #333;
+            h1{
+                #whitelogo{display: none;}
+                #blacklogo{display: block;}
+            }
+            #rightmenu{
+                ul li a{color: #000;}
+                ul li:first-child::after{content: "|"; color: #000; font-size: clamp(15px, 0.9vw, 20px);}
+            }
+            nav ul li a {color: #000;}
+            nav ul li a:hover{color: #808080;}
+        }
+    }
+    nav{display: flex;
+    }
+    #rightmenu{ vertical-align: middle;
+        ul{display: flex;}
+        ul li{margin: 0 10px; white-space: nowrap;
+            a{color: #fff; text-decoration: none; font-weight: bold; line-height: 47px;
+                font-size: clamp(16px, 1.05vw, 20px);}
+        }
+        ul li:first-child::after{content: "|"; color: #fff; padding-left: 16px;  font-weight: bold; font-size: clamp(10px, 0.9vw, 20px);}
+    }
+    
+    #mobilemenu{display: none;
+        .xi-bars{color: #000;}
+    }
+    
+    
+    nav ul {
+        white-space: nowrap;
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        white-space: nowrap;
+        display: inline;
+        margin: 0 3.5vw;
+    }
+    
+    nav ul li a {
+        line-height: 47px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: clamp(16px, 1.35vw, 22px);
+    }
+    
+    nav ul li a:hover{color: #808080;}
+
+
+    /* Main */
+
+    /*메인 스타일*/
+    main {
+
+        //Main 예약폼
+        #booking {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            //outline: 1px solid red; 
+            background: #fff;
+            margin-bottom: 100px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+            .inner {
+                padding: 0 220px;
+            }
+
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+
+            .search-container {
+                display: flex;
+                align-items: center;
+                gap: 10vw;
+                padding: 20px 0;
+                justify-content: center; //감싸고 있는 애가 flex일 때 justify-content: center; 주면 가운데 정렬됨
+            }
+
+            .search-box {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                white-space: nowrap;
+            }
+
+            .label {
+                font-size: clamp(16px, 1.0vw, 20px);
+                font-weight: bold;
+                color: #8B4513;
+                /* 브라운 계열 */
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                white-space: nowrap;
+            }
+
+            select,
+            input {
+                width: 180px;
+                border: none;
+                border-bottom: 1px solid black;
+                padding: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                background: none;
+                outline: none;
+            }
+
+            .guest-counter {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .guest-counter button {
+                width: 25px;
+                height: 25px;
+                border: 1px solid black;
+                background: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            .guest-counter span {
+                font-size: 16px;
+                width: 20px;
+                text-align: center;
+            }
+
+            .search-btn {
+                padding: 10px 92px;
+                border: 2px solid #8B4513;
+                background: none;
+                cursor: pointer;
+                font-size: 16px;
+                color: #8B4513;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+
+            .search-btn:hover {
+                background: #8B4513;
+                color: white;
+            }
+        }
+
+        //Main 숙소이미지
+        .inner {
+            max-width: 1299px;
+            margin: 0 auto; //가운데 정렬
+        }
+
+        #RoomInformation .RoomInformation_txt1 {
+            margin-top: 145px;
+            font-size: 20px;
+            font-family: "Abel";
+            color: #8B4513;
+            letter-spacing: 5px;
+        }
+
+        #RoomInformation p {
+            margin: 16px 0;
+            font-family: "Pretendard";
+            color: #8B4513;
+            font-size: 40px;
+        }
+
+        #RoomInformation .RoomInformation_hyphen {
+            font-size: 20px;
+            font-family: "Trebuchet MS";
+            color: #8B4513;
+            display: block;
+        }
+
+        #RoomInformation .RoomInformation_bar {
+            display: none;
+        }
+
+        #ground_plan .RoomInformation_txt2 {
+            font-size: 16px;
+            margin-top: 28px;
+            font-family: "Trebuchet MS";
+            color: #2B2921;
+            line-height: 1.8;
+            width: 50%;
+        }
+
+        //font-weight:200;
+        #ground_plan {
+            display: flex;
+            gap: 125px;
+            margin-bottom: 90px;
+        }
+
+        #ground_plan .RoomInformation_txt2 p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        #ground_plan>p {
+            width: 50%;
+        }
+
+        #ground_plan>p img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #RoomGuide {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #E6E6E6;
+            max-width: 1299px;
+            max-height: 141px;
+            margin: 0 auto;
+            display: flex;
+            padding: 20px 0;
+        }
+
+        #RoomGuide p {
+            font-size: 20px;
+            font-family: "Abel";
+            color: #8B4513;
+            letter-spacing: 5px;
+            width: 31%;
+            //영문타이틀 고정 스타일
+        }
+
+        #RoomGuide li {
+            font-family: "Trebuchet MS";
+            color: #2B2921;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        #RoomGuide li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #999999;
+            vertical-align: 5px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+
+        #RoomGuide ul {
+            width: 46%;
+            color: #999999;
+        }
+
+        #RoomGuide ul:last-child {
+            width: 23%;
+        }
+
+        #RoomGuide li span {
+            color: #999999;
+        }
+
+        #RoomGuide li.last::before {
+            display: none;
+        }
+
+        #Features {
+            border-top: 1px solid #E6E6E6;
+            max-width: 1299px;
+            max-height: 141px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        #Features p {
+            font-size: 20px;
+            font-family: "Abel";
+            color: #8B4513;
+            letter-spacing: 5px;
+            width: 31%;
+        }
+
+        #Features ul {
+            display: flex;
+            text-align: center;
+            gap: 80px;
+            margin: 5px 0;
+        }
+
+        #Features ul span {
+            display: block;
+            font-family: "Trebuchet MS";
+            color: #999999;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #SERVICES_FACILTIES {
+            border-top: 1px solid #E6E6E6;
+            max-width: 1299px;
+            max-height: 141px;
+            border-bottom: 1px solid #E6E6E6;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        #SERVICES_FACILTIES p {
+            font-size: 20px;
+            font-family: "Abel";
+            color: #8B4513;
+            letter-spacing: 5px;
+            width: 31%;
+        }
+
+        #SERVICES_FACILTIES li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #999999;
+            vertical-align: 5px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+
+        #SERVICES_FACILTIES ul {
+            width: 23%;
+        }
+
+        #SERVICES_FACILTIES li {
+            font-family: "Trebuchet MS";
+            color: #999999;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        //Main 숙소이미지
+        #RoomInfoContainer {
+            max-width: 1299px;
+            margin: 96px auto; //값이 위아래, 가운데 정렬됨
+        }
+
+        #RoomInfoContainer .swiper-button-prev {
+            left: 17px;
+            color: #fff;
+            text-shadow: 2px 5px 5px black;
+        }
+
+        #RoomInfoContainer .swiper-button-next {
+            right: 17px;
+            color: #fff;
+            text-shadow: 2px 5px 5px black;
+        }
+
+        //Main 숙소 주의사항
+        #RoomCaution {
+            padding: 112px 0;
+            background: #FAF8F3;
+        }
+
+        #RoomCaution .RoomCaution_txt1 {
+            font-size: 20px;
+            font-family: "Abel";
+            color: #8B4513;
+            letter-spacing: 5px;
+        }
+
+        #RoomCaution .RoomCaution_txt2 {
+            padding: 17px 0;
+            font-family: "Pretendard";
+            color: #8B4513;
+            font-size: 30px;
+            border-bottom: 1px solid #8B4513;
+            margin-bottom: 30px;
+        }
+
+        #RoomCaution .RoomCaution_txt3 li {
+            font-family: "Trebuchet MS";
+            color: #2B2921;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        #RoomCaution .RoomCaution_txt3 li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #2B2921;
+            vertical-align: 5px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+
+        #RoomCaution .RoomCaution_txt3>p {
+            margin-left: 14px;
+            color: #656565;
+        }
+    }
+
+
+    //footer
+    footer .inner {
+        padding: 0 220px;
+    }
+
+    footer {
+        hr {
+            margin: 25px 0;
+        }
+
+        .foottitle {
+            font-weight: bold;
+        }
+
+        .phone {
+            font-size: clamp(24px, 1.6vw, 30px);
+            font-weight: bold;
+            margin: -6px 0 6px;
+        }
+
+        background: #333;
+        color: #fff;
+        padding: 1vw 0;
+        width: 100%;
+        bottom: 0;
+        font-size: 0.8vw;
+        white-space: nowrap;
+
+        #footerlogo {
+            margin-bottom: 30px;
+            margin-top: 10px;
+
+            p {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 8vw
+                }
+            }
+        }
+
+        #footercontent {
+            display: flex;
+            justify-content: space-between;
+            font-size: clamp(12px, 0.8vw, 20px);
+
+            #firstfoot {
+                display: flex;
+
+                #qus {
+                    width: 30%;
+                    line-height: 1.5;
+                }
+
+                #ans {
+                    width: 70%;
+                    line-height: 1.5;
+                }
+            }
+
+            #secondfoot {
+                ul li a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+
+                li {
+                    line-height: 1.5;
+                }
+            }
+
+            #thirdfoot {
+                ul li {
+                    line-height: 1.5;
+                }
+            }
+
+            #forthfoot {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li a {
+                        color: #555;
+                    }
+                }
+            }
+        }
+
+        #copyright {
+            color: #FFFfff77;
+        }
+    }
+
+
+
+    //★ ipad 값 따로 주기 → @media all and (max-width:1024px){값}
+    @media all and (max-width:1024px) {
+        .inner {
+            padding: 0 4%;
+        }
+
+        main #booking {
+            height: 175px;
+        }
+
+        main #booking .check-out {
+            order:5; 
+        }
+
+        main #booking #reservation.inner .search-container{
+        flex-wrap: wrap;            
+        }
+
+
+        main #reservation.inner {
+            padding: 0 60px;
+
+            .search-container {
+                display: flex;
+                align-items: center;
+                gap:20px 48px;
+                justify-content: space-between;
+                padding: 20px 0;
+            }
+
+            .search-btn {
+                padding: 10px 50px;
+            }
+        }
+
+
+        main #sub_view img {
+            width: 100%;
+        }
+
+        main .RoomInformation_txt2 p {
+            display: inline;
+        }
+
+        main #ground_plan {
+            flex-direction: column;
+        }
+
+        main #ground_plan .RoomInformation_txt2 {
+            width: 100%;
+            text-align: left; //글자 왼쪽 정렬
+        }
+
+        main .inner {
+            text-align: center;
+        }
+
+        main #ground_plan>p {
+            width: auto; //이미지 하나만 있으니까 0 auto; 안해도 됨
+        }
+
+        main .RoomCaution_txt3 {
+            text-align: left;
+        }
+
+        main #RoomGuide p {
+            margin-left: 4%;
+        }
+
+        main #Features p {
+            margin-left: 4%;
+        }
+
+        main #SERVICES_FACILTIES p {
+            margin-left: 4%;
+        }
+
+        main #RoomCaution .RoomCaution_txt2 {
+            padding-bottom: 4%;
+            text-align: left;
+        }
+
+        main #RoomCaution .RoomCaution_txt1 {
+            text-align: left;
+        }
+
+
+        #RoomInfoContainer img{
+            width: 100%;
+        }
+
+
+        // ▼속성명을 앞에 똑같이 줘야함.()
+        main #RoomInformation .RoomInformation_hyphen {
+            display: none;
+        }
+
+        main #RoomInformation .RoomInformation_bar {
+            display: block;
+            color: #8B4513;
+        }
+
+
+        footer .inner {
+            padding: 4%;
+        }
+    }

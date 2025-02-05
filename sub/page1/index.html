@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브페이지1_pc</title>
+    <!--파비콘연결-->
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!--xeicon(아이콘)연결-->
+    <link href="//cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="css/stylesheet.css"><!--옆에 스타일시트 항상 연결해주기 ! !-->
+</head>
+
+<body>
+    <!-- Head -->
+    <header>
+        <div class="inner">
+            <h1><a href="/portfolio/index.html"><img id="whitelogo" src="../images/logo_W.png" alt="logoW">
+                <img id="blacklogo" src="../images/logo_B.png" alt="logoB"></a>
+            </h1>
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#home">한울채</a></li>
+                    <li><a href="#rooms">여행지</a></li>
+                    <li><a href="#promotion">프로모션</a></li>
+                    <li><a href="#magazine">매거진</a></li>
+                    <li id="reserve"><a class="btn" href="#subreserve">예약</a></li>
+                </ul>
+            </nav>
+            <div id="rightmenu">
+                <ul>
+                    <li><a href="#login">LOGIN</a></li>
+                    <li><a href="#English">ENG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="subreserve">
+            <div id="close" class="btn"></div>
+
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+        <!--Main 서브view-->
+        <div id="sub_view">
+            <img src="../images/sub_page1_Visualimg.png" alt="메인비주얼">
+        </div><!--end:#sub_view-->
+
+        <!--Main 예약폼-->
+        <section id="booking">
+            <div id="reservation" class="inner">
+                <div class="search-container">
+                    <!-- 여행지 선택 (select 태그 사용) -->
+                    <div class="search-box">
+                        <div class="label">
+                            <i class="xi-maker"></i> 숙소명
+                        </div>
+                        <select>
+                            <option value="">아름재</option>
+                        </select>
+                    </div>
+
+                    <!-- 체크인/체크아웃 -->
+                    <div class="search-box check-out">
+                        <div class="label">
+                            <i class="xi-calendar"></i> CHECK IN / CHECK OUT
+                        </div>
+                        <div class="date-picker">
+                            <input type="date" id="check-in">
+                            <input type="date" id="check-out">
+                        </div>
+                    </div>
+
+                    <!-- 인원 선택 -->
+                    <div class="search-box">
+                        <div class="label"><i class="xi-user-o"></i> 인원</div>
+                        <div class="guest-counter">
+                            <button>-</button>
+                            <span>2</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <!-- 검색 버튼 -->
+                    <button class="search-btn">예약하기 <i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section><!--end:#booking-->
+
+        <!--Main 숙소안내-->
+        <div class="inner">
+            <section id="RoomInformation">
+                <div class="RoomInformation_txt1">
+                    ROOM INFORMATION
+                </div><!--end:.RoomInformation_txt1-->
+                <p>아름재</p>
+                <div class="RoomInformation_hyphen">
+                    -
+                </div><!--end:.RoomInformation_hyphen-->
+                <div class="RoomInformation_bar">
+                    |
+                </div><!--end:.RoomInformation_bar-->
+            </section><!--end:#RoomInformation-->
+
+            <section id="ground_plan">
+                <div class="RoomInformation_txt2">
+                    <p>아름재는 멋진 전망을 감상하기 위한 관광객으로 북적이는 북촌8경 길에 있습니다. 해가
+                        저물 즈음 아름재가 위치한 북촌 8경 길을 따라 산책하기도 좋습니다.</p>
+                    <p>길을 따라 걸으며 서울 같지 않은 탁 트인 전망과 북악산, 인왕산의 초록숲을 감상해 보세
+                        요. 한옥 옆 계단을 조금만 내려가면 삼청동 길의 전통음식점과 카페도
+                        즐비하여 식사하기에도 좋습니다.</p>
+                    <p>'아름'은 두 팔을 벌려 껴안은 둘레의 길이나 물건의 양을 뜻하는 순우리말로,
+                        힘들여 언덕을 오르고 나면 지친 몸과 마음을 두 팔 벌려 보듬어 안아주는
+                        쉼이 있는 집이라는 의미를 가지고 있습니다.</p>
+                    <p>걷기만 해도 기분 좋은 삼청동 골목 구석구석을 탐방하며, 볼거리와 놀 거리를 즐겨보세
+                        요. 쉼이 있는 공간, 아름재에서 편안한 공간을 준비하여 기다리겠습니다.</p>
+                </div><!--end:#RoomInformation_txt2-->
+                <p><img src="../images/ground_plan.png" alt="숙소 평면도"></p>
+            </section><!--end:#ground_plan-->
+        </div><!--end:.inner-->
+
+        <div id="RoomGuide">
+            <P>ROOM GUIDE</P>
+            <ul>
+                <li><span>위치</span> 서울시 종로구 북초로5나길25 <span>지도보기</span></li>
+                <li><span>정원</span> 기준 인원 2인 (최대 2인)</li>
+                <li><span>정원</span> 1Queen Bed</li>
+            </ul>
+            <ul>
+                <li><span>주차</span> 주차 불가</li>
+                <li><span>크기</span> 20.28sqm(약 6.7평)</li>
+                <li class="last"><span>#욕조 #삼청동 #북촌</span></li>
+            </ul>
+        </div><!--end:#RoomGuide-->
+
+        <div id="Features">
+            <p>FEATURES</p>
+            <ul>
+                <li><img src="../images/sub1_icon1.png" alt=""><span>노천탕</span></li>
+                <li><img src="../images/sub1_icon2.png" alt=""><span>독립 키친</span></li>
+                <li><img src="../images/sub1_icon3.png" alt=""><span>독립 화장실</span></li>
+            </ul>
+        </div><!--end:Features-->
+
+        <div id="SERVICES_FACILTIES">
+            <p>SERVICES & FACILTIES</p>
+            <ul>
+                <li>헤어드라이어</li>
+                <li>샴푸</li>
+                <li>ott 전용 TV</li>
+                <li>비데</li>
+            </ul>
+            <ul>
+                <li>주방용품</li>
+                <li>식탁</li>
+                <li>와인잔</li>
+                <li>에어컨</li>
+            </ul>
+            <ul>
+                <li>필수품</li>
+                <li>노트북 작업공간</li>
+                <li>냉장고</li>
+                <li>바디비누</li>
+            </ul>
+        </div><!--end:#SERVICES_FACILTIES-->
+
+        <!--Main 숙소이미지-->
+        <div id="RoomInfoContainer">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="../images/room_Img1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/room_Img8.png" alt=""></div>
+                    ...
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div><!--end:#RoomInfoContainer-->
+
+        <!--Main 숙소 주의사항-->
+        <section id="RoomCaution"> <!--inner : 한꺼번에 가운데 정렬하기 위함-->
+            <div class="inner">
+                <p class="RoomCaution_txt1"> <!--inner 안에 있기 때문에 굳이 div를 만들 필요없음.-->
+                    AMENITIES
+                </p><!--end:.RoomCaution_txt1-->
+                <p class="RoomCaution_txt2">
+                    주의사항
+                </p><!--end:.RoomCaution_txt2-->
+                <ul class="RoomCaution_txt3">
+                    <li>주차 공간이 없습니다. '모두의 주차장' 어플을 통하여 인근 공영 주차장을 이용해 주세요.</li>
+                    <br>
+                    <p>숙소를 예약하기 위해서는 아래의 규칙에 대한 동의가 필요하며, 규칙을 어기는 경우 강제 퇴실 혹은 페널티가 부과될 수 있습니다.</p>
+                    <br>
+                    <li>8세 미만 영·유아를 동반하여 숙박하는 경우 보호자의 각별한 주의가 필요합니다. 사고 발생 시 책임은 보호자에게 있습니다.</li>
+                    <li>만 19세 미만은 보호자 없이 단독 숙박이 불가능합니다.</li>
+                    <li>허가 받지 않은 상업 촬영 및 이벤트는 불가합니다.</li>
+                    <li>냄새와 연기가 심한 음식은 조리가 불가합니다.</li>
+                    <li>실내외 모든 구역은 금연입니다.</li>
+                    <li>소음, 고성방가 등은 금지됩니다.</li>
+                    <li>예약 인원 외 출입은 불가합니다.</li>
+                    <li>출입구에 CCTV가 설치되어 있습니다.</li>
+                    <li>한옥의 특성상 벌레 유입이 있을 수 있으며, 청소 시 벌레 유입을 최소화하려 노력하고 있습니다. 예민하신 분들은 신중한 예약 부탁드리며, 이로 인한 환불은 불가합니다.
+                    </li>
+                    <li>보조견을 제외한 반려동물 동반은 불가합니다.</li>
+                    <li>장애인 고객님께서 예약하는 경우 저희에게 말씀주시면 도움을 드리겠습니다.</li>
+                </ul><!--end:.RoomCaution_txt3-->
+            </div><!--end:.inner-->
+        </section><!--end:#RoomCaution-->
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="inner">
+            <div id="footerlogo">
+                <p><img src="../images/logo_W.png" alt="footerlogo"></p>
+            </div>
+            <div id="footercontent">
+                <div id="firstfoot">
+                    <ul id="qus">
+                        <li>상호명</li>
+                        <li>대표자</li>
+                        <li>주소</li>
+                        <li>사업자번호</li>
+                        <li>통신판매업번호</li>
+                        <li>관광사업자등록</li>
+                    </ul>
+                    <ul id="ans">
+                        <li>(주) HANULCHAE</li>
+                        <li>김정애</li>
+                        <li>전주특별자치도 전주시 덕진구 백제대로 572 4층</li>
+                        <li>418-90-44549</li>
+                        <li>제 2010-전주덕진-121호</li>
+                        <li>일반여행업 2018-000049호(전주시청)</li>
+                    </ul>
+                </div>
+                <div id="secondfoot">
+                    <ul>
+                        <li class="foottitle">Guide</li>
+                        <li>&nbsp;</li>
+                        <div>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div id="thirdfoot">
+                    <ul>
+                        <li class="foottitle">Customer Center</li>
+                        <li>&nbsp;</li>
+                        <li class="phone">063&#41;276-2381</li>
+                        <li>평일 09:00~18:00 점심 12:00 ~ 13:00</li>
+                        <li>(토,일 공휴일 휴무)</li>
+                    </ul>
+                </div>
+                <div id="forthfoot">
+                    <p class="foottitle">SNS</p>
+                    <p>&nbsp;</p>
+                    <ul>
+                        <li><a href="#"><img src="../images/icon_instagram.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_pinterest.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div id="copyright">
+                <p>(주) 한울채는 통신판매 중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한
+                    의무와 책임은 각 판매자에게 있습니다.</p>
+                <p>Copyright&copy;HANULCHAE</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!--스와이퍼 플러그인 연결-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper("#RoomInfoContainer .swiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+
+            breakpoints: {
+                //화면의 너비가 1024이상 적용옵션
+                1024: { spaceBetween: 30 },
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+
+            },
+        });
+    </script>
+    </main>
+
+
+
+
+    <script src="js/EzenAddClass.js"></script>
+    <script src="js/EzenScrollClass.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
