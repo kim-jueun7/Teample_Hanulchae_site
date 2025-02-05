@@ -1,0 +1,1182 @@
+@charset "UTF-8";
+/*리셋코드*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: "pretendard";
+}
+
+/*
+#subreserve{width: 100%; height: 540%; background: #fff; border: 1px solid #000;
+visibility: hidden; opacity: 0; z-index: 999; position:absolute; top: 85px; left: 0;
+transition: all 0.5s;
+}
+#subreserve.active{visibility: visible; opacity: 1; z-index: 10;}
+*/
+#mobilegnb {
+  width: 100%;
+  height: 560%;
+  background: #333;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  transition: all 0.5s;
+}
+#mobilegnb ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#mobilegnb ul li {
+  width: 100%;
+  height: 19%;
+  border-bottom: 1px solid #fff;
+  margin: 0;
+}
+#mobilegnb ul li a {
+  line-height: 60px;
+  font-size: 24px;
+}
+#mobilegnb ul li:last-child {
+  border-bottom: none;
+}
+
+#mobilegnb.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
+
+body {
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background-color: #FAF8F3;
+  box-sizing: border-box;
+}
+
+header {
+  z-index: 500;
+  box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  padding: 1vw 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  transition: all 0.4s;
+}
+header .inner {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .inner h1 {
+  white-space: nowrap;
+  font-size: 0;
+}
+header .inner h1 img {
+  width: 8vw;
+}
+header .inner h1 #blacklogo {
+  display: none;
+}
+header.scrolled {
+  background: #fff;
+  color: #333;
+}
+header.scrolled h1 #whitelogo {
+  display: none;
+}
+header.scrolled h1 #blacklogo {
+  display: block;
+}
+header.scrolled #rightmenu ul li a {
+  color: #000;
+}
+header.scrolled #rightmenu ul li:first-child::after {
+  content: "|";
+  color: #000;
+  font-size: clamp(15px, 0.9vw, 20px);
+}
+header.scrolled nav ul li a {
+  color: #000;
+}
+header.scrolled nav ul li a:hover {
+  color: #808080;
+}
+
+nav {
+  display: flex;
+}
+
+#rightmenu {
+  vertical-align: middle;
+}
+#rightmenu ul {
+  display: flex;
+}
+#rightmenu ul li {
+  margin: 0 10px;
+  white-space: nowrap;
+}
+#rightmenu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 47px;
+  font-size: clamp(16px, 1.05vw, 20px);
+}
+#rightmenu ul li:first-child::after {
+  content: "|";
+  color: #fff;
+  padding-left: 16px;
+  font-weight: bold;
+  font-size: clamp(10px, 0.9vw, 20px);
+}
+
+#mobilemenu {
+  display: none;
+}
+#mobilemenu .xi-bars {
+  color: #000;
+}
+
+nav ul {
+  white-space: nowrap;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  white-space: nowrap;
+  display: inline;
+  margin: 0 3.5vw;
+}
+
+nav ul li a {
+  line-height: 47px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: clamp(16px, 1.35vw, 22px);
+}
+
+nav ul li a:hover {
+  color: #808080;
+}
+
+main {
+  width: 100%;
+}
+main .scroll {
+  opacity: 0;
+  transition: all 0.9s;
+  transform: translateY(70px);
+}
+main .scroll.scrolled {
+  opacity: 1;
+  transition: all 0.9s;
+  transform: translateY(0px);
+}
+
+#mainvisual {
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#mainvisual .sharp {
+  margin-left: 20px;
+}
+#mainvisual .swiper {
+  width: 100%;
+  height: 100%;
+}
+#mainvisual .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+#mainvisual .swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+#mainvisual .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mainvisual .swiper #pager {
+  display: flex;
+  position: absolute;
+  right: 220px;
+  bottom: 80px;
+  z-index: 100;
+}
+#mainvisual .swiper #pager .page {
+  color: #fff;
+  margin: 0 40px;
+  width: 40px;
+  text-align: center;
+}
+#mainvisual .swiper #pager .prev, #mainvisual .swiper #pager .next {
+  cursor: pointer;
+}
+#mainvisual .intro {
+  position: absolute;
+  left: 220px;
+  bottom: 80px;
+  color: #fff;
+}
+#mainvisual .intro h2 {
+  line-height: 1.3;
+  font-size: clamp(30px, 2.5vw, 48px);
+  white-space: nowrap;
+}
+#mainvisual .intro h4 {
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: clamp(18px, 1.5vw, 25px);
+  white-space: nowrap;
+  font-weight: 500;
+}
+#mainvisual .intro p:nth-child(3) {
+  margin: 20px 0;
+  width: 170px;
+  height: 100%;
+  transition: all 0.5s;
+}
+#mainvisual .intro p:nth-child(3) a {
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 10px 50px;
+  height: 47px;
+  line-height: 47px;
+  width: 150px;
+  font-weight: bold;
+}
+#mainvisual .intro p:nth-child(3):hover a {
+  color: #8B4513;
+  background: #fff;
+}
+#mainvisual .intro p:nth-child(4) a {
+  text-decoration: none;
+  color: #fff;
+}
+#mainvisual .intro p:nth-child(4) .hotel {
+  padding-left: 10px;
+}
+
+.inner {
+  padding: 0 220px;
+}
+
+#booking {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#booking .inner {
+  padding: 0 220px;
+}
+#booking * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#booking .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  padding: 20px 0;
+}
+#booking .search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  white-space: nowrap;
+}
+#booking .date-picker {
+  cursor: pointer;
+}
+#booking .label {
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: bold;
+  color: #8B4513; /* 브라운 계열 */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+#booking select, #booking input {
+  width: 180px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+#booking .guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#booking .guest-counter button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+#booking .guest-counter span {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+#booking .search-btn {
+  padding: 10px 100px;
+  border: 2px solid #8B4513;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #8B4513;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+#booking .search-btn:hover {
+  background: #8B4513;
+  color: white;
+}
+
+#rooms .titles h2 {
+  margin-bottom: 20px;
+  font-size: clamp(24px, 2.1vw, 40px);
+}
+
+#roomtabs {
+  width: 100%;
+  white-space: nowrap;
+}
+#roomtabs .land {
+  display: none;
+}
+#roomtabs input {
+  display: none;
+}
+#roomtabs input:checked + label p {
+  color: #000;
+  background: #2B2921;
+  min-width: 40px;
+}
+#roomtabs input:checked + label p span {
+  font-weight: bold;
+  color: #fff;
+  font-size: clamp(16px, 1vw, 20px);
+  white-space: nowrap;
+}
+#roomtabs input + label {
+  width: 3vw;
+  min-width: 40px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+#roomtabs input + label p {
+  width: 3vw;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+#roomtabs input + label p span {
+  font-weight: bold;
+  font-size: clamp(16px, 1vw, 20px);
+  color: #2B2921;
+  white-space: nowrap;
+}
+
+.locations {
+  width: 100%;
+  height: 27vw; /*outline: 1px solid blue;*/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.locations .room {
+  width: 32%;
+  height: 25vw; /*outline: 1px solid green;*/
+  box-sizing: border-box;
+}
+.locations .room .roomimg {
+  width: 100%;
+  height: 16vw;
+  position: relative; /*outline: 1px solid yellow;*/
+}
+.locations .room .roomimg > p {
+  width: 100%;
+  height: 100%;
+}
+.locations .room .roomimg > p img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: relative;
+}
+.locations .room .roomimg .discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+}
+.locations .room .roomimg .discount p {
+  width: 100%;
+  height: 1.5vw;
+  margin-right: 5px;
+}
+.locations .room .roomimg .discount p span {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.locations .room .roomimg .discount p .dis1 {
+  background: #017BC6;
+  padding: 4px 10px;
+  font-size: clamp(10px, 1vw, 16px);
+}
+.locations .room .roomimg .discount p .dis2 {
+  background: #8B4513;
+  padding: 4px 10px;
+  font-size: clamp(10px, 1vw, 16px);
+}
+.locations .room .info {
+  width: 100%;
+  height: 10vw;
+  box-sizing: border-box; /*outline: 1px solid gray;*/
+  padding: 5px 0;
+  text-align: center;
+}
+.locations .room .info p:first-child {
+  font-weight: bold;
+  font-size: clamp(18px, 1.3vw, 25px);
+  margin-top: 13px;
+  white-space: nowrap;
+}
+.locations .room .info p:nth-child(2) {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: clamp(16px, 1.05vw, 21px);
+  color: #2B2921;
+}
+.locations .room .info p:nth-child(3) {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: clamp(15px, 1vw, 20px);
+  white-space: nowrap;
+  color: #2B2921;
+}
+.locations .room .info p:last-child {
+  margin-top: 5px;
+  white-space: nowrap;
+}
+.locations .room .info p:last-child .price {
+  color: #8B4513;
+  font-weight: 900;
+  font-size: clamp(15px, 1vw, 20px);
+}
+.locations .room .info p:last-child .ogprice {
+  color: #555;
+  text-decoration: line-through;
+  margin-right: 3px;
+  font-size: clamp(15px, 1vw, 20px);
+}
+
+main .locations {
+  display: none;
+}
+
+main #tab1:checked ~ #roomlist #location1 {
+  display: flex;
+}
+
+main #tab2:checked ~ #roomlist #location2 {
+  display: flex;
+}
+
+main #tab3:checked ~ #roomlist #location3 {
+  display: flex;
+}
+
+main #tab4:checked ~ #roomlist #location4 {
+  display: flex;
+}
+
+main #tab5:checked ~ #roomlist #location5 {
+  display: flex;
+}
+
+main #tab6:checked ~ #roomlist #location6 {
+  display: flex;
+}
+
+main #tab7:checked ~ #roomlist #location7 {
+  display: flex;
+}
+
+main #tab8:checked ~ #roomlist #location8 {
+  display: flex;
+}
+
+main #tab9:checked ~ #roomlist #location9 {
+  display: flex;
+}
+
+main #tab10:checked ~ #roomlist #location10 {
+  display: flex;
+}
+
+main #tab11:checked ~ #roomlist #location11 {
+  display: flex;
+}
+
+p.more {
+  float: right;
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 1%;
+}
+p.more a {
+  color: #2B2921;
+  font-weight: bold;
+  font-size: clamp(14px, 1vw, 20px);
+}
+
+#travel {
+  margin-bottom: 100px;
+}
+#travel .titles {
+  margin-bottom: 20px;
+}
+#travel .titles h2 {
+  font-size: clamp(24px, 2.1vw, 40px);
+}
+#travel #travellist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 23.6vw;
+}
+#travel #travellist div {
+  width: 23.2%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+#travel #travellist div p:first-child {
+  width: 100%;
+  height: 100%;
+}
+#travel #travellist div p:first-child img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+#travel #travellist div p:first-child img:hover {
+  scale: 1.1;
+}
+#travel #travellist div .travelp {
+  color: #fff;
+  font-size: clamp(18px, 1.7vw, 33px);
+  font-weight: bolder;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+#promotion {
+  width: 100%;
+  height: 13vw;
+  position: relative;
+  margin-bottom: 90px;
+}
+#promotion img {
+  width: 99.95%;
+  min-height: 100px;
+}
+#promotion #bannerp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.4vw;
+  padding-top: 2.7vw;
+}
+#promotion #bannerp h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7vw;
+  margin: 10px 0 24px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+#promotion #bannerp p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2vw;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-weight: 500;
+}
+#promotion #bannerp p span {
+  font-weight: bold;
+  font-size: 1.7vw;
+}
+
+.container {
+  padding: 0 20px 0px 220px;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+#magazine {
+  margin-bottom: 100px;
+}
+#magazine .titles {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+#magazine .titles h2 {
+  font-size: clamp(24px, 2.1vw, 40px);
+}
+#magazine .swiper-wrapper {
+  width: 23.8%;
+  position: relative;
+}
+#magazine .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+#magazine .swiper-wrapper .swiper-slide img {
+  width: 100%;
+}
+#magazine .caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 22%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+#magazine .caption h6 {
+  margin-bottom: 10px;
+  font-size: clamp(12px, 0.9vw, 18px);
+  font-weight: 400;
+}
+#magazine .caption p {
+  margin: 0;
+  font-size: clamp(14px, 1.1vw, 22px);
+  font-weight: 300;
+}
+
+#ads {
+  width: 100%;
+  height: 26.1vw;
+  max-height: 500px;
+  background: url("../images/banner_02.png") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#ads #adstitle {
+  color: #fff;
+}
+#ads #adstitle h2 {
+  font-size: clamp(20px, 3vw, 50px);
+}
+#ads #adstitle p:nth-child(2) {
+  font-size: clamp(16px, 2vw, 20px);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+#ads #adstitle p:nth-child(3) {
+  width: 220px;
+  height: 100%;
+  transition: all 0.5s;
+  margin: 0 auto;
+}
+#ads #adstitle p:nth-child(3) a {
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 10px 50px;
+  height: 47px;
+  line-height: 47px;
+  width: 150px;
+  font-weight: bold;
+}
+#ads #adstitle p:nth-child(3) a span {
+  font-size: 20px;
+}
+#ads #adstitle p:nth-child(3) a:hover {
+  color: #8B4513;
+  background: #fff;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1vw 0;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.8vw;
+  white-space: nowrap;
+}
+footer hr {
+  margin: 25px 0;
+}
+footer .foottitle {
+  font-weight: bold;
+}
+footer .phone {
+  font-size: clamp(24px, 1.6vw, 30px);
+  font-weight: bold;
+  margin: -6px 0 6px;
+}
+footer #footerlogo {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+footer #footerlogo p {
+  width: 100%;
+  height: 100%;
+}
+footer #footerlogo p img {
+  width: 8vw;
+}
+footer #footercontent {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(12px, 0.8vw, 20px);
+}
+footer #footercontent #firstfoot {
+  display: flex;
+}
+footer #footercontent #firstfoot #qus {
+  width: 30%;
+  line-height: 1.5;
+}
+footer #footercontent #firstfoot #ans {
+  width: 70%;
+  line-height: 1.5;
+}
+footer #footercontent #secondfoot {
+  /*ul{display: flex; flex-direction: column; justify-content: flex-end; height: calc(100% - 26.5px);}*/
+}
+footer #footercontent #secondfoot ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer #footercontent #secondfoot li {
+  line-height: 1.5;
+}
+footer #footercontent #thirdfoot ul li {
+  line-height: 1.5;
+}
+footer #footercontent #forthfoot ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer #footercontent #forthfoot ul li a {
+  color: #555;
+}
+footer #copyright {
+  color: rgba(255, 255, 255, 0.4666666667);
+}
+
+@media all and (max-width: 1024px) {
+  .inner {
+    padding: 0 60px;
+  }
+  .container {
+    padding: 0 0 0 60px;
+  }
+  #mainvisual {
+    height: 700px;
+  }
+  #mainvisual .swiper #pager {
+    position: absolute;
+    right: 70px;
+    bottom: 80px;
+  }
+  #mainvisual .intro {
+    position: absolute;
+    left: 60px;
+    bottom: 80px;
+    color: #fff;
+  }
+  header .inner {
+    padding: 0 60px;
+  }
+  #promotion #bannerp {
+    padding-top: 7px;
+  }
+  #promotion #bannerp h3 {
+    font-size: 24px;
+    margin: 12px 0 15px;
+  }
+  #promotion #bannerp p {
+    font-size: 18px;
+  }
+  #promotion #bannerp p span {
+    font-size: 24px;
+  }
+  #booking {
+    height: 100px;
+    margin-bottom: 50px;
+    margin-top: -5px;
+    z-index: 999;
+  }
+  #reservation.inner {
+    padding: 0 60px;
+  }
+  #reservation.inner .search-container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 20px 0;
+  }
+  #reservation.inner .search-btn {
+    padding: 10px 30px;
+  }
+}
+@media all and (max-width: 430px) {
+  .inner {
+    padding: 0 20px;
+  }
+  .search-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    padding: 0 20px 0 20px;
+  }
+  #mainvisual {
+    height: 520px;
+  }
+  #mainvisual #pager .prev p img,
+  #mainvisual #pager .next p img {
+    display: none;
+  }
+  header .inner {
+    padding: 3px 10px;
+  }
+  header .inner h1 img {
+    width: 15vw;
+  }
+  header #gnb {
+    display: none;
+  }
+  header #rightmenu {
+    display: none;
+  }
+  #mobilemenu {
+    display: block;
+  }
+  #mobilemenu li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header {
+    background: #fff;
+    color: #333;
+    height: 60px;
+    padding: 12px;
+  }
+  header .inner h1 #blacklogo {
+    display: block;
+  }
+  header .inner h1 #whitelogo {
+    display: none;
+  }
+  header.scrolled {
+    background: #fff;
+    color: #333;
+  }
+  header.scrolled #mobilegnb ul li a {
+    color: #fff;
+  }
+  header.scrolled #mobilegnb ul li a:hover {
+    color: #808080;
+  }
+  #mainvisual .swiper #pager {
+    position: absolute;
+    right: 20px;
+    bottom: 21px;
+    z-index: 100;
+  }
+  #mainvisual .swiper #pager .page {
+    margin: 0 0px;
+  }
+  #mainvisual .intro {
+    position: absolute;
+    left: 20px;
+    top: 90px;
+    color: #fff;
+  }
+  #mainvisual .intro h2 {
+    line-height: 1.3;
+    font-size: clamp(30px, 2.5vw, 48px);
+    white-space: nowrap;
+  }
+  #mainvisual .intro h4 {
+    margin-top: 10px;
+    line-height: 1.4;
+    font-size: clamp(18px, 1.5vw, 25px);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  #mainvisual .intro p:nth-child(3) {
+    display: none;
+  }
+  #mainvisual .intro p:nth-child(4) {
+    margin-top: 250px;
+  }
+  #booking {
+    height: 300px;
+    margin: 0 0 50px 0;
+  }
+  #booking #reservation.inner .search-container {
+    gap: 15px;
+  }
+  #booking .inner {
+    padding: 0 20px;
+  }
+  #booking .label {
+    white-space: wrap;
+  }
+  #booking .label.firstlabel {
+    padding-right: 19px;
+  }
+  #booking .search-box {
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+  #booking .search-box .date-picker input {
+    padding-left: 35px;
+  }
+  #booking select option {
+    text-align: center;
+  }
+  #booking select option span {
+    width: 100%;
+    height: 100%;
+  }
+  #rooms {
+    height: 400px;
+    margin-bottom: 60px;
+  }
+  #rooms .titles h2 {
+    margin-bottom: 5px;
+  }
+  #roomtabs {
+    white-space: wrap;
+  }
+  #roomtabs .land {
+    display: block;
+    margin-bottom: -15px;
+    width: 100px;
+    background: #FAF8F3;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  #roomtabs .more {
+    margin-top: -10px;
+    margin-bottom: 8px;
+  }
+  #roomtabs label {
+    display: none !important;
+  }
+  #roomlist {
+    height: 500px;
+  }
+  .locations {
+    white-space: wrap;
+    flex-wrap: wrap;
+  }
+  .locations .room {
+    width: 48%;
+    height: 18vh;
+  }
+  .locations .room .roomimg {
+    width: 100%;
+    height: 100%;
+  }
+  .locations .room .roomimg .discount {
+    top: 5px;
+    left: 10px;
+    width: 65%;
+    height: 40px;
+  }
+  .locations .room .roomimg .discount p {
+    width: 50%;
+    height: 100%;
+    margin-right: 0;
+  }
+  .locations .room .roomimg .discount p span {
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+  .locations .room .info p:nth-child(2) {
+    white-space: wrap;
+    word-break: keep-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .locations .room.skiproom {
+    display: none;
+  }
+  #travel {
+    margin-bottom: 100px;
+    width: 100%;
+    height: 510px;
+    box-sizing: border-box;
+  }
+  #travel #travellist {
+    height: 250px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #travel #travellist #nature, #travel #travellist #spot, #travel #travellist #entertainment, #travel #travellist #food {
+    width: 49%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+  #promotion #bannerp h3 {
+    font-size: 16px;
+    margin: 10px 0 12px;
+  }
+  #promotion #bannerp p {
+    font-size: 12px;
+  }
+  #promotion #bannerp p span {
+    font-size: 16px;
+  }
+  #magazine .swiper-wrapper {
+    width: 60%;
+  }
+  #ads {
+    height: 300px;
+  }
+  #ads #adstitle p:nth-child(2) {
+    padding: 0 25px;
+    word-break: keep-all;
+  }
+  #ads #adstitle p:nth-child(3) {
+    height: 50%;
+  }
+  footer {
+    height: 550px;
+  }
+  footer #footerlogo {
+    margin-bottom: 15px;
+  }
+  footer #footerlogo p img {
+    width: 15vw;
+  }
+  footer #footercontent {
+    display: flex;
+    flex-direction: column;
+  }
+  footer #footercontent #fisrtfoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  footer #footercontent .foottitle {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  footer #footercontent .phone {
+    font-size: 15px;
+  }
+  footer #footercontent #secondfoot ul > div {
+    display: flex;
+  }
+  footer #footercontent #secondfoot ul > div li {
+    margin-right: 30px;
+  }
+  footer #footercontent #forthfoot > ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0px;
+  }
+  footer #footercontent > div {
+    margin-bottom: 10px;
+  }
+  footer hr {
+    display: none;
+  }
+  footer #copyright {
+    width: 100%;
+    white-space: wrap;
+    margin-top: 10px;
+  }
+  footer #copyright p {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */

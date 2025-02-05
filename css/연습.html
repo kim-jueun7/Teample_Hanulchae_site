@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #814c20; /* 브라운 계열 */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 180px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            padding-bottom: 3px;
+        }
+
+        .guest-counter {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .guest-counter button {
+            width: 25px;
+            height: 25px;
+            border: 1px solid black;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .guest-counter span {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .search-btn {
+            padding: 10px 20px;
+            border: 1px solid #814c20;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #814c20;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .search-btn:hover {
+            background: #814c20;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <!-- 여행지 선택 -->
+        <div class="search-box">
+            <div class="label">
+                <i class="fas fa-map-marker-alt"></i> 여행지
+            </div>
+            <div class="dropdown">
+                전체
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <!-- 체크인/체크아웃 -->
+        <div class="search-box">
+            <div class="label">
+                <i class="fas fa-calendar-alt"></i> CHECK IN / CHECK OUT
+            </div>
+            <div class="dropdown">
+                01.10 금 - 01.11 토 (1박)
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <!-- 인원 선택 -->
+        <div class="search-box">
+            <div class="label">👤 인원</div>
+            <div class="guest-counter">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <!-- 검색 버튼 -->
+        <button class="search-btn">검색 <i class="fas fa-search"></i></button>
+    </div>
+
+</body>
+</html>
