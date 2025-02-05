@@ -1,0 +1,373 @@
+/*리셋 코드*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Head */
+header {
+    z-index: 500;
+    box-sizing: border-box;
+    background: transparent;
+    color: #fff;
+    padding: 1vw 0;
+    text-align: center;
+    position:fixed;
+    width: 100%;
+    transition: all .4s;
+    .inner{padding: 0 50px; display: flex; justify-content: space-between; align-items: center;
+        h1{white-space: nowrap; font-size:0;
+            img{width: 8vw; }
+            #blacklogo{display: none;}
+        }    
+    }
+    &.scrolled{background: #fff; color: #333;
+        h1{
+            #whitelogo{display: none;}
+            #blacklogo{display: block;}
+        }
+        #rightmenu{
+            ul li a{color: #000;}
+            ul li:first-child::after{content: "|"; color: #000; font-size: clamp(15px, 0.9vw, 20px);}
+        }
+        nav ul li a {color: #000;}
+        nav ul li a:hover{color: #808080;}
+    }
+}
+nav{display: flex;
+}
+#rightmenu{ vertical-align: middle;
+    ul{display: flex;}
+    ul li{margin: 0 10px; white-space: nowrap;
+        a{color: #fff; text-decoration: none; font-weight: bold; line-height: 47px;
+            font-size: clamp(16px, 1.05vw, 20px);}
+    }
+    ul li:first-child::after{content: "|"; color: #fff; padding-left: 16px;  font-weight: bold; font-size: clamp(10px, 0.9vw, 20px);}
+}
+
+#mobilemenu{display: none;
+    .xi-bars{color: #000;}
+}
+
+
+nav ul {
+    white-space: nowrap;
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    white-space: nowrap;
+    display: inline;
+    margin: 0 3.5vw;
+}
+
+nav ul li a {
+    line-height: 47px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(16px, 1.35vw, 22px);
+}
+
+nav ul li a:hover{color: #808080;}
+
+
+/* Main */
+
+/*여행지폼*/
+main{
+    main .inner{
+        padding: 51px 310.5px 0 ;
+        text-align: center;
+    }
+    .trip_menu {
+        display: flex;
+        margin: 43px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .trip_menu span {
+        display: block;
+        font-family: "Trebuchet MS";
+        color: #999999;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .trip_menu li{
+        margin:0 20px;
+        text-align: center;
+        img:nth-child(2){
+            display: none;
+        }
+    }
+    .trip_menu li:nth-child(5){
+        margin:0px;
+    }
+    .trip_menu li:hover{
+        img:nth-child(1){
+            display: none;
+        }
+        img:nth-child(2){
+            display: inline-block;  //두번째만 고정된 색
+        }
+    }
+    .trip_menu li:hover span {
+        color: #333;
+        font-weight: bold;
+    }
+    .trip_menu .spot {
+        color: #333;
+        font-weight: bold;
+    }
+    .trip_menu {
+        color: #999999;
+    }
+
+    hr{
+        margin: 51px 0 87px;
+        border-color: #E6E6E6;
+        opacity: 30%;   //숫자가 적을수록 컬러가 더 투명해짐
+    }
+    .TOURIST_ATTRACTION{
+        text-align: center;
+    }
+    .TOURIST_ATTRACTION #small_title {
+        font-size: 20px;
+        font-family: "Abel";
+        color: #8B4513;
+        letter-spacing: 5px;
+    }
+    .TOURIST_ATTRACTION #big_title{
+        margin: 16px 0;
+        font-family: "Pretendard";
+        color: #8B4513;
+        font-size: 40px;
+    }
+    .TOURIST_ATTRACTION #verticalbar{
+        font-size: 20px;
+        font-family: "Trebuchet MS";
+        color: #8B4513;
+        margin-bottom: 25px;
+    }
+    .TOURIST_ATTRACTION #small_txt{
+        margin-bottom: 50px;
+        line-height: 1.8;
+        font-family: "Trebuchet MS";
+        color: #2B2921;
+    }
+
+    .Trip_section .Trip_txt_list{
+        margin-bottom: 35px;
+    }
+    .Trip_section .Trip_txt_list ul{
+        justify-content: center;
+        display: flex;
+        gap: 5px;
+    }
+    .Trip_section .Trip_txt_list a:hover{
+        background:#2B2921;
+        color:#fff;
+    }
+    .Trip_section .Trip_txt_list a{
+        border-radius: 5px;
+        padding: 3px 19px;
+        font-family: "Pretendard";
+        font-weight: bold;
+        font-size: 25px;
+        color: #979797;
+    }
+    .Trip_section .Trip_txt_list .active{
+        background:#2B2921;
+        color: #fff;
+    }
+
+    .Trip_img_list{
+        max-width: 1299px;
+        margin:0 auto;  //가운데 정렬
+    }
+    .Trip_img_list ul{
+        display:flex;
+        flex-wrap:wrap; //줄바꿈
+        gap:30px;
+        margin-bottom: 96px;
+    }
+    .Trip_img_list li{
+        width: calc((100% - 60px) / 3); //100%에서 60px을 빼고, 나누기 3을 한것
+        position: relative;
+        display:none;
+    }
+    .Trip_img_list li.active{
+        display: block;
+    }
+    .Trip_img_list .Trip_All_img{
+        border-radius: 19px;
+        overflow: hidden;   //이미지 라운드 만들어서 나머지 숨김
+    }
+    .Trip_img_list .Trip_All_img img{
+        width: 100%;
+        height: 282px;
+        object-fit: cover;  //이미지를 숨기더라도, 정비율로 맞춰줌
+        transition: all 0.4s ease-in-out;   
+            //transition: all 0.4s 이미지 마우스 올리면, 움직임
+            //ease-in-out; 이미지가 느리게 움직임
+    }
+    .Trip_img_list li:hover .Trip_All_img img{  
+            //.Trip_img_list li:hover -> li에 속한 것들 올리면 이미지가 반응함.
+        transform: scale(1.15); //이미지 확대
+    }
+    .Trip_img_list .spot{
+        position: absolute;
+        left:18px;
+        top:18px;
+        background: #13131366;
+        padding:6px 10px;
+        border-radius: 50px;
+    }
+    .Trip_img_list .spot img{
+        margin-right: 8px;
+    }
+    .Trip_img_list span{
+        color:#fff;
+        font-family: "Pretendard";
+        font-size: 17px;
+    }
+    .Trip_img_list h3{
+        font-family: "Trebuchet MS";
+        color: #2B2921;
+        margin:15px 0 0 7px;
+    }
+
+
+}//main
+
+
+//footer
+footer .inner{
+    padding: 0 220px;
+}
+footer {
+    hr {
+        margin: 25px 0;
+    }
+
+    .foottitle {
+        font-weight: bold;
+    }
+
+    .phone {
+        font-size: clamp(24px, 1.6vw, 30px);
+        font-weight: bold;
+        margin: -6px 0 6px;
+    }
+    
+    background: #333;
+    color: #fff;
+    padding: 1vw 0;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8vw;
+    white-space: nowrap;
+
+    #footerlogo {
+        margin-bottom: 30px;
+        margin-top: 10px;
+
+        p {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 8vw
+            }
+        }
+    }
+
+    #footercontent {
+        display: flex;
+        justify-content: space-between;
+        font-size: clamp(12px, 0.8vw, 20px);
+
+        #firstfoot {
+            display: flex;
+
+            #qus {
+                width: 30%;
+                line-height: 1.5;
+            }
+
+            #ans {
+                width: 70%;
+                line-height: 1.5;
+            }
+        }
+
+        #secondfoot {
+            ul li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            
+            li {
+                line-height: 1.5;
+            }
+        }
+
+        #thirdfoot {
+            ul li {
+                line-height: 1.5;
+            }
+        }
+
+        #forthfoot {
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                li a {
+                    color: #555;
+                }
+            }
+        }
+    }
+
+    #copyright {
+        color: #FFFfff77;
+    }
+}
+
+
+
+//★ ipad 값 따로 주기 → @media all and (max-width:1024px){값}
+@media all and (max-width:1024px) {
+    main #sub_view img {
+        width: 100%;
+    }
+    main .Trip_img_list {
+        padding: 0 4%;
+    }
+    main .Trip_img_list li {
+        width: calc((100% - 60px) / 2);
+        position: relative;
+    }
+    
+
+
+    footer .inner {
+        padding: 4%;
+    }
+}

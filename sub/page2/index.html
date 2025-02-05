@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한울채 서브페이지2</title>
+    <!--파비콘연결-->
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <!-- Head -->
+    <header>
+        <div class="inner">
+            <h1><a href="/portfolio/index.html"><img id="whitelogo" src="../images/logo_W.png" alt="logoW">
+            <img id="blacklogo" src="../images/logo_B.png" alt="logoB"></h1></a>
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#home">한울채</a></li>
+                    <li><a href="#rooms">여행지</a></li>
+                    <li><a href="#promotion">프로모션</a></li>
+                    <li><a href="#magazine">매거진</a></li>
+                    <li id="reserve"><a class="btn" href="#subreserve">예약</a></li>
+                </ul>
+            </nav>
+            <div id="rightmenu">
+                <ul>
+                    <li><a href="#login">LOGIN</a></li>
+                    <li><a href="#English">ENG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="subreserve">
+            
+            <div id="close" class="btn"></div>
+   
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+        <!--Main 서브view-->
+        <div id="sub_view">
+            <img src="../images/sub_page2_Visualimg.png" alt="메인비주얼">
+        </div><!--end:#sub_view-->
+
+        <!--Main 여행지폼-->
+        <section class="inner">
+            <ul class="trip_menu">
+                <li><a href="#"><img src="../images/자연 icon1.png" alt=""><img src='../images/자연 icon2.png'  alt=""><span>자연</span></a></li>
+                <li>|</li>
+                <li><a href="#"><img src="../images/관광지 icon2.png" alt=""><img src='../images/관광지 icon2.png'  alt=""><span class="spot">관광지</span></a></li>
+                <li>|</li>
+                <li><a href="#"><img src="../images/엔터테인먼트 icon1.png" alt=""><img src='../images/엔터테인먼트 icon2.png'  alt=""><span>엔터테인먼트</span></a></li>
+                <li>|</li>
+                <li><a href="#"><img src="../images/음식1.png" alt=""><img src='../images/음식2.png'  alt=""><span>음식</span></a></li>
+            </ul><!--end:trip_menu-->
+        </section><!--end:.inner-->
+        <hr>
+
+        <!--관광지-->
+        <section class="inner">
+            <div class="TOURIST_ATTRACTION">
+                <p id="small_title">TOURIST ATTRACTION</p>
+                <p id="big_title">관광지</p>
+                <p id="verticalbar">|</p>
+                <p id="small_txt">전국 인기 관광지, 한울채에서 함께 찾아보세요.</p>
+            </div><!--.TOURIST_ATTRACTION-->
+
+            <div class="Trip_section">
+                <div class="Trip_txt_list">
+                    <ul>
+                        <li><a class="active" href=".all">전체</a></li> <!--페이지 들어올때 고정으로 보이게 하기(class="active"줌)-->
+                        <li class=""><a href=".jeju">제주</a></li>
+                        <li class=""><a href=".gangwon">강원</a></li>
+                        <li class=""><a href=".gyeongsang">경상</a></li>
+                        <li class=""><a href=".seoul">서울</a></li>
+                        <li class=""><a href=".jeolla">전라</a></li>
+                        <li class=""><a href=".gyeonggi">경기</a></li>
+                        <li class=""><a href=".busan">부산</a></li>
+                        <li class=""><a href=".chungcheong">충청</a></li>
+                        <li class=""><a href=".gwangju">광주</a></li>
+                        <li class=""><a href=".incheon">인천</a></li>
+                    </ul>
+                </div><!--end:Trip_txt_list-->
+
+                <div class="Trip_img_list"> <!-- 수업내용(탭메뉴 디자인) 참고 ★탭마다 사진도 각각 6장씩 구해야함★-->
+                    <ul>    <!-- ★ a href와 li들에게 똑값은 값(class)을 주고, 앞에 active 주기 -->
+                        <li class="active seoul all"> 
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>북촌 한옥마을</h3>
+                        </li>
+                        <li class="active gyeongsang busan all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>해운대 해수욕장</h3>
+                        </li>
+                        <li class="active seoul all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_서울_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>한강공원 야경</h3>
+                        </li>
+
+                        <li class="active seoul all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>문화역 서울284</h3>
+                        </li>
+                        <li class="active jeolla gwangju all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>화담숲 가을 단풍 축제</h3>
+                        </li>
+                        <li class="active jeolla all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img6.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">남원</span>
+                            <h3>광한루원</h3>
+                        </li>
+                   
+                        <li class="active jeolla all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img7.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">전주</span>
+                            <h3>한옥마을</h3>
+                        </li>
+                        <li class="active jeju all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img8.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>성산일출봉</h3>
+                        </li>
+                        <li class="active gyeonggi incheon all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img9.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>센트럴파크 야경</h3>
+                        </li>
+                 
+                        <li class="active gyeongsang busan all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img10.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>해동용궁사</h3>
+                        </li>
+                        <li class="active gyeongsang all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img11.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">경주</span>
+                            <h3>불국사</h3>
+                        </li>
+                        <li class="active gangwon all">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img12.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>대관령 자연휴양림</h3>
+                        </li>
+
+                        <!-- 이후에 오는 것 li들은 <전체 탭>에 나오지 않도록(갯수제한), class안에 all 하고 active 주지 않기!! -->
+                         <!--제주-->
+                        <li class="jeju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_제주_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>대포해안주상절리대</h3>
+                        </li>
+                        <li class="jeju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_제주_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>신창 풍차해안도로</h3>
+                        </li>
+                        <li class="jeju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_제주_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>반포포구</h3>
+                        </li>
+                        <li class="jeju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_제주_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>관음사탐방로</h3>
+                        </li>
+                        <li class="jeju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_제주_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">제주</span>
+                            <h3>금능해수욕장</h3>
+                        </li>
+                        <!--강원-->
+                        <li class="gangwon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_강원_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>경포대</h3>
+                        </li>
+                        <li class="gangwon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_강원_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>정동심곡 바다부채길</h3>
+                        </li>
+                        <li class="gangwon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_강원_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>안목해변 커피거리</h3>
+                        </li>
+                        <li class="gangwon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_강원_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>순긋해변</h3>
+                        </li>
+                        <li class="gangwon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_강원_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">강릉</span>
+                            <h3>정동진 모래시계 공원</h3>
+                        </li>
+                        <!--경상-->
+                        <li class="gyeongsang">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경상_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">문경</span>
+                            <h3>고모산성</h3>
+                        </li>
+                        <li class="gyeongsang">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경상_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">안동</span>
+                            <h3>만휴정</h3>
+                        </li>
+                        <li class="gyeongsang">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경상_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">경주</span>
+                            <h3>동궁과 월지</h3>
+                        </li>
+                        <!--부산-->
+                        <li class="busan">
+                            <p class="Trip_All_img"><img src="../images/Tirp_부산_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>마린시티 야경</h3>
+                        </li>
+                        <li class="busan">
+                            <p class="Trip_All_img"><img src="../images/Tirp_부산_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>송도 해상케이블카</h3>
+                        </li>
+                        <li class="busan">
+                            <p class="Trip_All_img"><img src="../images/Tirp_부산_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>해운대 블루라인파크</h3>
+                        </li>
+                        <li class="busan">
+                            <p class="Trip_All_img"><img src="../images/Tirp_부산_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부산</span>
+                            <h3>감천 문화마을</h3>
+                        </li>
+                        <!--충청-->
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_충청_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">논산</span>
+                            <h3>관촉사 은진미륵</h3>
+                        </li>
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_충청_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">공주</span>
+                            <h3>공산성</h3>
+                        </li>
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_All_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">부여</span>
+                            <h3>궁남지</h3>
+                        </li>
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_충청_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">논산</span>
+                            <h3>세계유산 돈암서원</h3>
+                        </li>
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_충청_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">논산</span>
+                            <h3>시민가족공원</h3>
+                        </li>
+                        <li class="chungcheong">
+                            <p class="Trip_All_img"><img src="../images/Tirp_충청_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">공주</span>
+                            <h3>금학생태공원</h3>
+                        </li>
+                        <!--서울-->
+                        <li class="seoul">
+                            <p class="Trip_All_img"><img src="../images/Tirp_서울_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>서울숲 산책길</h3>
+                        </li>
+                        <li class="seoul">
+                            <p class="Trip_All_img"><img src="../images/Tirp_서울_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>경복궁</h3>
+                        </li>
+                        <li class="seoul">
+                            <p class="Trip_All_img"><img src="../images/Tirp_서울_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">서울</span>
+                            <h3>청와대</h3>
+                        </li>
+                        <!--전라-->
+                        <li class="jeolla">
+                            <p class="Trip_All_img"><img src="../images/Tirp_전라_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">남원</span>
+                            <h3>춘향테마파크</h3>
+                        </li>
+                        <li class="jeolla">
+                            <p class="Trip_All_img"><img src="../images/Tirp_전라_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">전주</span>
+                            <h3>덕진공원</h3>
+                        </li>
+                        <li class="jeolla gwangju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_전라_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>무등산 국립공원</h3>
+                        </li>
+                        <!--광주-->
+                        <li class="gwangju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_광주_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>5·18 기념공원</h3>
+                        </li>
+                        <li class="gwangju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_광주_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>광주호 호수생태원</h3>
+                        </li>
+                        <li class="gwangju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_광주_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>운천호수공원</h3>
+                        </li>
+                        <li class="gwangju">
+                            <p class="Trip_All_img"><img src="../images/Tirp_광주_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">광주</span>
+                            <h3>1913 송정역시장</h3>
+                        </li>
+                        <!--경기-->
+                        <li class="gyeonggi">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경기_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">양평</span>
+                            <h3>두물머리 용문사</h3>
+                        </li>
+                        <li class="gyeonggi">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경기_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">가평</span>
+                            <h3>이탈리아마을 피노키오와다빈치</h3>
+                        </li>
+                        <li class="gyeonggi">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경기_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">수원</span>
+                            <h3>수원화성</h3>
+                        </li>
+                        <li class="gyeonggi">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경기_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">가평</span>
+                            <h3>자라섬 꽃축제</h3>
+                        </li>
+                        <li class="gyeonggi">
+                            <p class="Trip_All_img"><img src="../images/Tirp_경기_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">수원</span>
+                            <h3>화성행궁</h3>
+                        </li>
+                        <!--인천-->
+                        <li class="incheon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_인천_img1.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>인천대공원</h3>
+                        </li>
+                        <li class="incheon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_인천_img2.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>월미도 테마파크</h3>
+                        </li>
+                        <li class="incheon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_인천_img3.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>차이나타운</h3>
+                        </li>
+                        <li class="incheon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_인천_img4.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>송월동 동화마을</h3>
+                        </li>
+                        <li class="incheon">
+                            <p class="Trip_All_img"><img src="../images/Tirp_인천_img5.png" alt=""></p>
+                            <span class="spot"><img src="../images/spot_icon.png" alt="">인천</span>
+                            <h3>수도국산 달동네 박물관</h3>
+                        </li>
+                    </ul>
+                </div><!--end:Trip_img_list-->
+
+            </div><!--end:Trip_list-->
+
+        </section><!--end:.inner-->   
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="inner">
+            <div id="footerlogo">
+                <p><img src="../images/logo_W.png" alt="footerlogo"></p>
+            </div>
+            <div id="footercontent">
+                <div id="firstfoot">
+                    <ul id="qus">
+                        <li>상호명</li>
+                        <li>대표자</li>
+                        <li>주소</li>
+                        <li>사업자번호</li>
+                        <li>통신판매업번호</li>
+                        <li>관광사업자등록</li>
+                    </ul>
+                    <ul id="ans">
+                        <li>(주) HANULCHAE</li>
+                        <li>김정애</li>
+                        <li>전주특별자치도 전주시 덕진구 백제대로 572 4층</li>
+                        <li>418-90-44549</li>
+                        <li>제 2010-전주덕진-121호</li>
+                        <li>일반여행업 2018-000049호(전주시청)</li>
+                    </ul>
+                </div>
+                <div id="secondfoot">
+                    <ul>
+                        <li class="foottitle">Guide</li>
+                        <li>&nbsp;</li>
+                        <div>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div id="thirdfoot">
+                    <ul>
+                        <li class="foottitle">Customer Center</li>
+                        <li>&nbsp;</li>
+                        <li class="phone">063&#41;276-2381</li>
+                        <li>평일 09:00~18:00 점심 12:00 ~ 13:00</li>
+                        <li>(토,일 공휴일 휴무)</li>
+                    </ul>
+                </div>
+                <div id="forthfoot">
+                    <p class="foottitle">SNS</p>
+                    <p>&nbsp;</p>
+                    <ul>
+                        <li><a href="#"><img src="../images/icon_instagram.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icon_pinterest.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div id="copyright">
+                <p>(주) 한울채는 통신판매 중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한
+                    의무와 책임은 각 판매자에게 있습니다.</p>
+                <p>Copyright&copy;HANULCHAE</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/EzenAddClass.js"></script>
+    <script src="js/EzenScrollClass.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
